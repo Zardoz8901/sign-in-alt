@@ -348,4 +348,132 @@
     display: none;
   }
 
-  
+  /* Normalize End */
+@font-face {
+  font-family: "Swiss 721";
+  src: url(Assets/Swiss\ 721\ BT.ttf) format("truetype");
+}
+
+:root {
+  --color-red: #db2000;
+  --color-purple: #6E116E;
+  --color-tinge: #FFFEFE;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFEFE;
+  font-family: "Swiss 721";
+  color: var(--color-red);
+}
+
+.top-card {
+  width: 500px;
+  margin: 0 60px;
+  padding-bottom: 30px;
+}
+
+.top-card>p {
+  margin: 0;
+  padding: 1.2em 0;
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+.top-card>p:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 82px;
+  padding-bottom: 0;
+}
+
+.top-card>p:nth-child(2) {
+  position: relative;
+  left: 60px;
+}
+
+.input-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+  font-size: large;
+  margin: 0 60px;
+}
+
+.bottom-card {
+  display: flex;
+  justify-content: end;
+  width: 500px;
+  padding-top: 30px;
+  margin: 0 60px;
+}
+
+label {
+  display: flex;
+  position: relative;
+  left: -6px;
+  padding-top: .6em;
+  padding-bottom: .3em;
+  padding-left: .1em;
+}
+
+input {
+  display: flex;
+  box-sizing: border-box;
+  width: 220px;
+  padding: .2em;
+}
+
+.input-left {
+  color: var(--color-purple);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.input-right {
+  color: var(--color-red);
+  width: 220px;
+  flex-direction: column;
+}
+
+.input-left>input {
+  border: 1px solid var(--color-purple);
+}
+
+.input-right>input {
+  border: 1px solid var(--color-purple);z-index: ;
+}
+
+.button-container {
+ position: relative;
+ right: 60px;
+}
+
+.button-container>p {
+  position: relative;
+  left: 140px;
+  top: 4px;
+}
+
+.button-submit {
+  font-family: inherit;
+  background-color: var(--color-red);
+  color: var(--color-tinge);
+  width: 220px;
+  border: 0;
+  font-size: 1.2em;
+  padding: .4em 1.6em;
+}
+
+a {
+  color: var(--color-purple);
+}
