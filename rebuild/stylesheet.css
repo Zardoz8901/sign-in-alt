@@ -1,0 +1,10 @@
+body {
+    width: auto;
+    height: 100vh;
+    background-color: blue;
+}
+
+h1 {
+    color: red;
+    background-color: green;
+}
