@@ -1,10 +1,69 @@
 body {
+    display: flex;
+    flex-flow: row;
     width: auto;
     height: 100vh;
-    background-color: blue;
+    background-color: blanchedalmond;
 }
 
-h1 {
-    color: red;
-    background-color: green;
+.container.left {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 34%;
+    background-color: cornflowerblue;
+    gap: 2vh;
 }
+
+.container.right {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    gap: 2vh;
+}
+
+.middle {
+    display: flex;
+    flex-grow: 10;
+}
+
+.spacer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 9  
+}
+
+.logo.container {
+   display: flex;
+   flex-direction: column;
+   flex-grow: 3;
+   background-color: lightsalmon;
+   order: 1;
+}
+
+.logo.spacer {
+    display: flex;
+    flex-grow: 2;
+}
+
+.text.container {
+    display: flex;
+    flex-grow: 1;
+    background-color: lightsalmon;
+ }
+
+ 
+
+ .text.top.container, .text.bottom.container {
+    display: flex;
+    flex-grow: 3;
+    background-color: palevioletred;
+ }
+
+.text.top.spacer, .text.bottom.spacer {
+    display: flex;
+    flex-grow: 4;
+}
+
+ .text.bottom.spacer {
+    order: 1;
+ }
