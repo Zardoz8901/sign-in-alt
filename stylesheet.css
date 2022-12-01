@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'america-bold';
+    src: url('Assets/GT America Bold.otf');  
+}
+
+@font-face {
+    font-family: 'america';
+    src: url('Assets/GT America Regular.otf');
+}
+
+:root {
+    font-family: 'america', sans-serif;
+}
+
 body {
     display: flex;
     flex-flow: row;
@@ -6,19 +20,24 @@ body {
     background-color: blanchedalmond;
 }
 
+p {
+    margin: 0;
+}
+
 .container.left {
     display: flex;
     flex-direction: column;
     flex: 0 0 34%;
-    background-color: cornflowerblue;
     gap: 2vh;
+    background-image: url(Assets/Images/field.jpg);
+    background-size: cover;
 }
 
 .container.right {
     display: flex;
     flex-flow: column;
     flex-grow: 1;
-    gap: 2vh;
+    gap: 3vh;
 }
 
 .middle {
@@ -26,18 +45,44 @@ body {
     flex-grow: 10;
 }
 
+/* find consistent height for the spacers*/
 .spacer {
     display: flex;
     flex-direction: column;
-    flex-grow: 9  
+    flex-grow: 7;  
 }
 
 .logo.container {
    display: flex;
-   flex-direction: column;
-   flex-grow: 3;
-   background-color: lightsalmon;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+   background-color: salmon;
+   flex: 1;
    order: 1;
+}
+
+.logo.image {
+   display: flex;
+   flex: 1 0 auto;
+   height: 130px;
+   justify-content: space-around;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+img {
+    border-radius: 0;
+    border: #1b0e0c solid 10px;
+}
+
+.logo.text {
+    flex-grow: 1;
+    color: darkslateblue;
+    padding: 10px;
+    font-family: 'america-bold', sans-serif;
+    font-size: clamp(2rem, 3rem, 6rem);
+    text-align: center;
 }
 
 .logo.spacer {
@@ -45,25 +90,32 @@ body {
     flex-grow: 2;
 }
 
-.text.container {
+.form.container {
     display: flex;
     flex-grow: 1;
     background-color: lightsalmon;
  }
 
- 
-
  .text.top.container, .text.bottom.container {
+    height: 130px;
     display: flex;
-    flex-grow: 3;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    flex-grow: 5;
     background-color: palevioletred;
  }
 
+.text.bottom.container {
+    justify-content: flex-start;
+}
+
 .text.top.spacer, .text.bottom.spacer {
     display: flex;
-    flex-grow: 4;
+    flex-grow: 7;
 }
 
  .text.bottom.spacer {
     order: 1;
  }
+
