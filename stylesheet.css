@@ -22,6 +22,7 @@ body {
 
 p {
     margin: 0;
+    color: darkslateblue;
 }
 
 .container.left {
@@ -37,16 +38,19 @@ p {
     display: flex;
     flex-flow: column;
     flex-grow: 1;
-    gap: 3vh;
+    gap: 1rem;
 }
 
 .middle {
+    min-height: 60px;
     display: flex;
     flex-grow: 10;
 }
 
 /* find consistent height for the spacers*/
 .spacer {
+    min-height: 60px;
+    max-height: 200px;
     display: flex;
     flex-direction: column;
     flex-grow: 7;  
@@ -86,6 +90,7 @@ img {
 }
 
 .logo.spacer {
+    min-height: 216px;
     display: flex;
     flex-grow: 2;
 }
@@ -97,14 +102,32 @@ img {
  }
 
  .text.top.container, .text.bottom.container {
+    color: #1b0e0c;
+    padding-left: 1rem;
     height: 130px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: flex-end;
     align-content: flex-start;
     flex-grow: 5;
-    background-color: palevioletred;
  }
+
+.text.top.container {
+    font-size: 2rem;
+}
+
+.p2 {
+    padding-left: 1.7rem;
+}
+
+.p3 {
+    padding-left: 9.6rem;
+}
+
+.p4 {
+    font-size: 1.2rem;
+    padding-left: 1.7rem;
+}
 
 .text.bottom.container {
     justify-content: flex-start;
