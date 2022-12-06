@@ -17,12 +17,11 @@ body {
     flex-flow: row;
     width: auto;
     height: 100vh;
-    background-color: blanchedalmond;
+    background-color: lightgoldenrodyellow;
 }
 
 p {
     margin: 0;
-    color: darkslateblue;
 }
 
 .container.left {
@@ -37,6 +36,7 @@ p {
 .container.right {
     display: flex;
     flex-flow: column;
+    justify-content: center;
     flex-grow: 1;
     gap: 1rem;
 }
@@ -50,20 +50,22 @@ p {
 /* find consistent height for the spacers*/
 .spacer {
     min-height: 60px;
-    max-height: 200px;
+    max-height: 220px;
     display: flex;
     flex-direction: column;
-    flex-grow: 7;  
 }
 
 .logo.container {
-   display: flex;
+   min-height: 160px;
+    display: flex;
    flex-flow: row wrap;
    justify-content: center;
    align-items: center;
-   background-color: salmon;
+   background-color: #ee4223;
    flex: 1;
    order: 1;
+   box-shadow: inset 0 0 0 .3rem lightgoldenrodyellow;
+   border: .1rem solid lightgoldenrodyellow;
 }
 
 .logo.image {
@@ -77,68 +79,134 @@ p {
 
 img {
     border-radius: 0;
-    border: #1b0e0c solid 10px;
+    border: #1b0e0c solid .4rem;
 }
 
 .logo.text {
     flex-grow: 1;
-    color: darkslateblue;
+    color: lightgoldenrodyellow;
     padding: 10px;
     font-family: 'america-bold', sans-serif;
-    font-size: clamp(2rem, 3rem, 6rem);
+    font-size: clamp(2rem, 3rem, 4rem);
     text-align: center;
 }
 
 .logo.spacer {
-    min-height: 216px;
+    min-height: 200px;
     display: flex;
     flex-grow: 2;
 }
 
-.form.container {
+.middle:has(>.form.container) {
+    min-height: 280px;
+    max-height: 280px;
     display: flex;
-    flex-grow: 1;
+    width: 100vw;
     background-color: lightsalmon;
- }
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form.container {
+    position: relative;
+    top: 30px;
+    max-height: 300px;
+    max-width: 520px;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow:row ;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1.4rem;
+}
+
+input {
+    width: 20ch;
+    margin: 1rem;
+    color: #1b0e0c;    
+    background-color: lightgoldenrodyellow;
+    border: 1px solid #1b0e0c;
+    margin: 0px;
+}
+
+label {
+    color: #1b0e0c;
+    position: relative;
+    top: -68px;
+    left: 2px;
+}
+
+input:valid {
+    transition: .3s;
+    background-color: lightgreen;
+}
+
+input:invalid:focus {
+    transition: .2s;
+    box-shadow: inset 0 0 0 4px crimson;
+     /* also need animation and -moz-animation */
+     -webkit-animation: shake .5s linear;
+    }
+    /* also need keyframes and -moz-keyframes */
+     @-webkit-keyframes shake {
+        8%, 41% {
+            -webkit-transform: translateX(-10px);
+        }
+        25%, 58% {
+            -webkit-transform: translateX(10px);
+        }
+        75% {
+            -webkit-transform: translateX(-5px);
+        }
+        92% {
+            -webkit-transform: translateX(5px);
+        }
+        0%, 100% {
+            -webkit-transform: translateX(0);
+        }
+}
+
+button {
+    position: relative;
+    left: 426px;
+}
 
  .text.top.container, .text.bottom.container {
+    min-width: 520px;
+    max-width: 600px;
     color: #1b0e0c;
     padding-left: 1rem;
-    height: 130px;
+    min-height: 140px;
+    max-height: 300px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    align-content: flex-start;
-    flex-grow: 5;
+    align-content: center;
  }
 
 .text.top.container {
-    font-size: 2rem;
-}
-
-.p2 {
-    padding-left: 1.7rem;
-}
-
-.p3 {
-    padding-left: 9.6rem;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    align-items: flex-start;
 }
 
 .p4 {
-    font-size: 1.2rem;
-    padding-left: 1.7rem;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+
+span {
+    color: red;
+    font-weight: bold;
 }
 
 .text.bottom.container {
     justify-content: flex-start;
 }
 
-.text.top.spacer, .text.bottom.spacer {
-    display: flex;
-    flex-grow: 7;
-}
-
- .text.bottom.spacer {
+.text.bottom.spacer {
     order: 1;
  }
 
