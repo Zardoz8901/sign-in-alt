@@ -156,7 +156,6 @@ label:hover {
 
 input:valid {
     transition: .3s;
-    background-color: burlywood;
 }
 
 input:invalid:focus {

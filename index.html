@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
     <title>Strawbee</title>
 </head>
 <body>
@@ -34,36 +35,36 @@
             </div>
         </div>
         <div class="middle">
-            <div class="form container"> 
+            <form id="form" class="form container" action="/" method="get"> 
                 <div class="ipnuts left">
                     <div class="first-name form left">
-                        <input type="text" id="first-name" name="first-name" required>
+                        <input type="text" id="first-name" name="first-name">
                         <label for="first-name">First Name</label>
                     </div>
                     <div class="email form left">
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email">
                         <label for="email">Email</label>
                     </div>
                     <div class="password form left">
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password">
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <div class="inputs right">
                     <div class="last-name form right">
-                        <input type="text" id="last-name" name="last-name" required>
+                        <input type="text" id="last-name" name="last-name">
                         <label for="last-name">Last Name</label>
                     </div>
                     <div class="email-confirm form right">
-                        <input type="email" id="email-confirm" name="email-confirm" required>
+                        <input type="email" id="email-confirm" name="email-confirm">
                         <label for="email-confirm">Confirm Email</label>
                     </div>
                     <div class="password-confirm form right">
-                        <input type="password" id="password-confirm" name="password-confirm" required>
+                        <input type="password" id="password-confirm" name="password-confirm">
                         <label for="password-confirm">Confirm Password</label>
                     </div>
                 </div>
-            </div>    
+            </form>    
             <div class="button">
                 <button type="submit">Submit</button>
             </div>
