@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
         emailConfirm.setAttribute('required','')
         messages.push('Match email')
         e.preventDefault()
-        
+        errorElement.classList.add('error')
     }
     if (password.value.length >= 0) {
         password.setAttribute('required','')
@@ -38,7 +38,8 @@ form.addEventListener('submit', (e) => {
     if (passwordConfirm.value != password.value) {
         passwordConfirm.setAttribute('required','')
         messages.push('Match password')
-        e.preventDefault()    
+        e.preventDefault()
+        errorElement.classList.add('error')    
     }
     if (messages.length > 0)
     e.preventDefault()
